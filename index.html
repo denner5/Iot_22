@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <head>
+        <title>Shop_data</title>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}" />
+    </head>
+    <body>
+      <script type="text/javascript">
+              var timer = function() {
+                      setTimeout(function(){ window.location.reload(); }, 1500);
+              };
+              timer();
+              </script>
+        
+        <Section class="header"> 
+            <div class="pic"><img src="{{url_for('static', filename='oekologo.png')}}"/></div>
+            <div><h2>Dagens datovare</h2></div> 
+         
+
+            <div class="pic"><img src="{{url_for('static', filename='logo2.png')}}"/></div>
+          </section>
+      
+
+          <center>
+          <table border=5>
+              <thead>
+                      <td>Id: </td>
+                      <td>Stregkode: </td>
+                      <td>Navn på vare: </td>
+                      <td>Pris i kr: </td>
+              </thead>
+              {% for row in rows %}
+  
+                  <tr>
+                      <td>{{row["Id"]}}</td>
+                      <td>{{row["Stregkode"]}}</td>
+
+                      <td>{{row["Navn"]}}</td>
+                      <td>{{row["Pris"]}}</td>
+                  </tr>
+  
+              {% endfor %}
+          </table>
+          <br><br>
+
+          <section class="content">
+            <div class="cont_pic"><img src="{{url_for('static', filename='guleroots.png')}}"/></div>
+            <!-- <div class="cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates magnam cum dolore tempore ab molestiae, quos, atque fugiat labore, porro sint soluta delectus iusto itaque voluptatem dolor odit aliquid consequuntur?</div>
+            <div class="cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates magnam cum dolore tempore ab molestiae, quos, atque fugiat labore, porro sint soluta delectus iusto itaque voluptatem dolor odit aliquid consequuntur?</div> -->
+          </section>
+      
+          <section class="content">
+            <div class="cont_pic"><img src="{{url_for('static', filename='rugbrot.png')}}"/></div>
+            <!-- <div class="cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates magnam cum dolore tempore ab molestiae, quos, atque fugiat labore, porro sint soluta delectus iusto itaque voluptatem dolor odit aliquid consequuntur?</div>
+            <div class="cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates magnam cum dolore tempore ab molestiae, quos, atque fugiat labore, porro sint soluta delectus iusto itaque voluptatem dolor odit aliquid consequuntur?</div> -->
+          </section>
+
+
+
+
+      </body>
+      
+  </html>
+  
